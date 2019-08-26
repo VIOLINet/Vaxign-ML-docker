@@ -1,0 +1,8 @@
+-ninputs 25 -noutputs 1 
+-nhiddens1 30
+-train 1.NN1in 
+-validate 2.NN1in
+-test 3.NN1in
+-orate 0.001 -hrate 0.1
+-mom .9 -epochs 10000
+-end   (says end of run specification.  Now do it.)

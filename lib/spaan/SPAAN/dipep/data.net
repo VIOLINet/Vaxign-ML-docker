@@ -1,0 +1,991 @@
+Does spec.data exist?  yes.
+Reading 1.NN1in
+Doing command wc 1.NN1in > wcout_1.NN1in
+Doing command rm -f wcout_1.NN1in
+1.NN1in l 947 w 19887 num 947
+Reading 2.NN1in
+Doing command wc 2.NN1in > wcout_2.NN1in
+Doing command rm -f wcout_2.NN1in
+2.NN1in l 225 w 4725 num 225
+Reading 3.NN1in
+Doing command wc 3.NN1in > wcout_3.NN1in
+Doing command rm -f wcout_3.NN1in
+3.NN1in l 225 w 4725 num 225
+i 20 h1 28 h2 0 o 1 hr   0.100 or   0.001 mr 0.900 ep 10000 linOut 0 Wed Jun 25 18:10:55 2003
+epoch     1 train   0.000000 validate   0.000000 test   0.500000 fracCorr 0.551 Rsq   0.010560
+epoch   100 train   0.282359 validate   0.361068 test   0.361068 fracCorr 0.831 Rsq   0.591461
+epoch   200 train   0.213883 validate   0.357630 test   0.357630 fracCorr 0.849 Rsq   0.617063
+epoch   300 train   0.160910 validate   0.361071 test   0.361071 fracCorr 0.840 Rsq   0.689497
+epoch   400 train   0.132358 validate   0.372185 test   0.372185 fracCorr 0.831 Rsq   0.731917
+epoch   500 train   0.112608 validate   0.375245 test   0.375245 fracCorr 0.822 Rsq   0.755050
+epoch   600 train   0.102973 validate   0.373413 test   0.373413 fracCorr 0.827 Rsq   0.769392
+epoch   700 train   0.093510 validate   0.371169 test   0.371169 fracCorr 0.831 Rsq   0.784116
+epoch   800 train   0.087777 validate   0.373210 test   0.373210 fracCorr 0.831 Rsq   0.795185
+epoch   900 train   0.078524 validate   0.377806 test   0.377806 fracCorr 0.827 Rsq   0.804436
+epoch  1000 train   0.072094 validate   0.378008 test   0.378008 fracCorr 0.836 Rsq   0.806190
+epoch  1100 train   0.068468 validate   0.376243 test   0.376243 fracCorr 0.840 Rsq   0.808934
+epoch  1200 train   0.066393 validate   0.374869 test   0.374869 fracCorr 0.840 Rsq   0.812902
+epoch  1300 train   0.064943 validate   0.373818 test   0.373818 fracCorr 0.844 Rsq   0.816699
+epoch  1400 train   0.063842 validate   0.372989 test   0.372989 fracCorr 0.844 Rsq   0.820210
+epoch  1500 train   0.062974 validate   0.372342 test   0.372342 fracCorr 0.844 Rsq   0.823546
+epoch  1600 train   0.062284 validate   0.371845 test   0.371845 fracCorr 0.840 Rsq   0.826667
+epoch  1700 train   0.061723 validate   0.371490 test   0.371490 fracCorr 0.844 Rsq   0.829538
+epoch  1800 train   0.061258 validate   0.371247 test   0.371247 fracCorr 0.844 Rsq   0.832149
+epoch  1900 train   0.060865 validate   0.371101 test   0.371101 fracCorr 0.844 Rsq   0.834509
+epoch  2000 train   0.060528 validate   0.371020 test   0.371020 fracCorr 0.844 Rsq   0.836643
+epoch  2100 train   0.060237 validate   0.370994 test   0.370994 fracCorr 0.844 Rsq   0.838582
+epoch  2200 train   0.059983 validate   0.371000 test   0.371000 fracCorr 0.844 Rsq   0.840346
+epoch  2300 train   0.059758 validate   0.371034 test   0.371034 fracCorr 0.844 Rsq   0.841944
+epoch  2400 train   0.059558 validate   0.371084 test   0.371084 fracCorr 0.844 Rsq   0.843410
+epoch  2500 train   0.059380 validate   0.371149 test   0.371149 fracCorr 0.844 Rsq   0.844751
+epoch  2600 train   0.059220 validate   0.371223 test   0.371223 fracCorr 0.844 Rsq   0.845989
+epoch  2700 train   0.059074 validate   0.371304 test   0.371304 fracCorr 0.844 Rsq   0.847132
+epoch  2800 train   0.058942 validate   0.371389 test   0.371389 fracCorr 0.844 Rsq   0.848204
+epoch  2900 train   0.058821 validate   0.371474 test   0.371474 fracCorr 0.844 Rsq   0.849206
+epoch  3000 train   0.058711 validate   0.371561 test   0.371561 fracCorr 0.844 Rsq   0.850146
+epoch  3100 train   0.058610 validate   0.371647 test   0.371647 fracCorr 0.844 Rsq   0.851035
+epoch  3200 train   0.058516 validate   0.371730 test   0.371730 fracCorr 0.844 Rsq   0.851878
+epoch  3300 train   0.058430 validate   0.371810 test   0.371810 fracCorr 0.844 Rsq   0.852678
+epoch  3400 train   0.058350 validate   0.371894 test   0.371894 fracCorr 0.844 Rsq   0.853443
+epoch  3500 train   0.058275 validate   0.371976 test   0.371976 fracCorr 0.844 Rsq   0.854177
+epoch  3600 train   0.058206 validate   0.372049 test   0.372049 fracCorr 0.844 Rsq   0.854876
+epoch  3700 train   0.058140 validate   0.372128 test   0.372128 fracCorr 0.844 Rsq   0.855546
+epoch  3800 train   0.058079 validate   0.372197 test   0.372197 fracCorr 0.844 Rsq   0.856192
+epoch  3900 train   0.058022 validate   0.372266 test   0.372266 fracCorr 0.844 Rsq   0.856804
+epoch  4000 train   0.057969 validate   0.372337 test   0.372337 fracCorr 0.844 Rsq   0.857402
+epoch  4100 train   0.057918 validate   0.372400 test   0.372400 fracCorr 0.844 Rsq   0.857978
+epoch  4200 train   0.057870 validate   0.372462 test   0.372462 fracCorr 0.844 Rsq   0.858533
+epoch  4300 train   0.057825 validate   0.372525 test   0.372525 fracCorr 0.844 Rsq   0.859071
+epoch  4400 train   0.057782 validate   0.372590 test   0.372590 fracCorr 0.844 Rsq   0.859592
+epoch  4500 train   0.057741 validate   0.372645 test   0.372645 fracCorr 0.844 Rsq   0.860093
+epoch  4600 train   0.057703 validate   0.372701 test   0.372701 fracCorr 0.844 Rsq   0.860576
+epoch  4700 train   0.057666 validate   0.372759 test   0.372759 fracCorr 0.844 Rsq   0.861048
+epoch  4800 train   0.057632 validate   0.372815 test   0.372815 fracCorr 0.844 Rsq   0.861517
+epoch  4900 train   0.057598 validate   0.372865 test   0.372865 fracCorr 0.844 Rsq   0.861971
+epoch  5000 train   0.057567 validate   0.372914 test   0.372914 fracCorr 0.844 Rsq   0.862402
+epoch  5100 train   0.057536 validate   0.372961 test   0.372961 fracCorr 0.844 Rsq   0.862818
+epoch  5200 train   0.057507 validate   0.373008 test   0.373008 fracCorr 0.844 Rsq   0.863225
+epoch  5300 train   0.057480 validate   0.373055 test   0.373055 fracCorr 0.844 Rsq   0.863630
+epoch  5400 train   0.057453 validate   0.373101 test   0.373101 fracCorr 0.844 Rsq   0.864022
+epoch  5500 train   0.057428 validate   0.373143 test   0.373143 fracCorr 0.844 Rsq   0.864401
+epoch  5600 train   0.057404 validate   0.373181 test   0.373181 fracCorr 0.844 Rsq   0.864772
+epoch  5700 train   0.057380 validate   0.373225 test   0.373225 fracCorr 0.844 Rsq   0.865136
+epoch  5800 train   0.057358 validate   0.373265 test   0.373265 fracCorr 0.844 Rsq   0.865491
+epoch  5900 train   0.057336 validate   0.373302 test   0.373302 fracCorr 0.844 Rsq   0.865835
+epoch  6000 train   0.057316 validate   0.373334 test   0.373334 fracCorr 0.844 Rsq   0.866168
+epoch  6100 train   0.057296 validate   0.373364 test   0.373364 fracCorr 0.844 Rsq   0.866493
+epoch  6200 train   0.057276 validate   0.373391 test   0.373391 fracCorr 0.844 Rsq   0.866811
+epoch  6300 train   0.057258 validate   0.373419 test   0.373419 fracCorr 0.844 Rsq   0.867113
+epoch  6400 train   0.057240 validate   0.373443 test   0.373443 fracCorr 0.844 Rsq   0.867406
+epoch  6500 train   0.057223 validate   0.373466 test   0.373466 fracCorr 0.844 Rsq   0.867694
+epoch  6600 train   0.057206 validate   0.373492 test   0.373492 fracCorr 0.844 Rsq   0.867976
+epoch  6700 train   0.057190 validate   0.373518 test   0.373518 fracCorr 0.844 Rsq   0.868262
+epoch  6800 train   0.057175 validate   0.373541 test   0.373541 fracCorr 0.844 Rsq   0.868538
+epoch  6900 train   0.057160 validate   0.373566 test   0.373566 fracCorr 0.844 Rsq   0.868804
+epoch  7000 train   0.057145 validate   0.373587 test   0.373587 fracCorr 0.844 Rsq   0.869056
+epoch  7100 train   0.057131 validate   0.373607 test   0.373607 fracCorr 0.844 Rsq   0.869309
+epoch  7200 train   0.057118 validate   0.373629 test   0.373629 fracCorr 0.844 Rsq   0.869565
+epoch  7300 train   0.057104 validate   0.373651 test   0.373651 fracCorr 0.844 Rsq   0.869818
+epoch  7400 train   0.057092 validate   0.373670 test   0.373670 fracCorr 0.844 Rsq   0.870060
+epoch  7500 train   0.057079 validate   0.373689 test   0.373689 fracCorr 0.844 Rsq   0.870305
+epoch  7600 train   0.057067 validate   0.373707 test   0.373707 fracCorr 0.844 Rsq   0.870547
+epoch  7700 train   0.057056 validate   0.373721 test   0.373721 fracCorr 0.844 Rsq   0.870783
+epoch  7800 train   0.057044 validate   0.373735 test   0.373735 fracCorr 0.844 Rsq   0.871009
+epoch  7900 train   0.057033 validate   0.373745 test   0.373745 fracCorr 0.844 Rsq   0.871228
+epoch  8000 train   0.057022 validate   0.373755 test   0.373755 fracCorr 0.844 Rsq   0.871446
+epoch  8100 train   0.057012 validate   0.373766 test   0.373766 fracCorr 0.844 Rsq   0.871670
+epoch  8200 train   0.057002 validate   0.373781 test   0.373781 fracCorr 0.844 Rsq   0.871892
+epoch  8300 train   0.056992 validate   0.373792 test   0.373792 fracCorr 0.844 Rsq   0.872104
+epoch  8400 train   0.056982 validate   0.373804 test   0.373804 fracCorr 0.844 Rsq   0.872310
+epoch  8500 train   0.056973 validate   0.373815 test   0.373815 fracCorr 0.844 Rsq   0.872511
+epoch  8600 train   0.056964 validate   0.373825 test   0.373825 fracCorr 0.844 Rsq   0.872707
+epoch  8700 train   0.056955 validate   0.373832 test   0.373832 fracCorr 0.844 Rsq   0.872900
+epoch  8800 train   0.056946 validate   0.373843 test   0.373843 fracCorr 0.844 Rsq   0.873088
+epoch  8900 train   0.056938 validate   0.373855 test   0.373855 fracCorr 0.844 Rsq   0.873285
+epoch  9000 train   0.056929 validate   0.373868 test   0.373868 fracCorr 0.844 Rsq   0.873481
+epoch  9100 train   0.056921 validate   0.373878 test   0.373878 fracCorr 0.844 Rsq   0.873673
+epoch  9200 train   0.056914 validate   0.373883 test   0.373883 fracCorr 0.844 Rsq   0.873858
+epoch  9300 train   0.056906 validate   0.373887 test   0.373887 fracCorr 0.844 Rsq   0.874038
+epoch  9400 train   0.056898 validate   0.373891 test   0.373891 fracCorr 0.844 Rsq   0.874213
+epoch  9500 train   0.056891 validate   0.373898 test   0.373898 fracCorr 0.844 Rsq   0.874388
+epoch  9600 train   0.056884 validate   0.373906 test   0.373906 fracCorr 0.844 Rsq   0.874557
+epoch  9700 train   0.056877 validate   0.373912 test   0.373912 fracCorr 0.844 Rsq   0.874730
+epoch  9800 train   0.056870 validate   0.373917 test   0.373917 fracCorr 0.844 Rsq   0.874895
+epoch  9900 train   0.056863 validate   0.373925 test   0.373925 fracCorr 0.844 Rsq   0.875060
+epoch 10000 train   0.056857 validate   0.373926 test   0.373926 fracCorr 0.844 Rsq   0.875214
+epoch 10001 train   0.056857 validate   0.373926 test   0.373926 fracCorr 0.844 Rsq   0.875214
+pat     1 targets   0.000000 outputs   0.528203 errors  -0.528203
+pat     2 targets   0.000000 outputs   0.390054 errors  -0.390054
+pat     3 targets   1.000000 outputs   0.745984 errors   0.254016
+pat     4 targets   1.000000 outputs   0.232585 errors   0.767415
+pat     5 targets   0.000000 outputs   0.015883 errors  -0.015883
+pat     6 targets   1.000000 outputs   0.709451 errors   0.290549
+pat     7 targets   0.000000 outputs   0.553332 errors  -0.553332
+pat     8 targets   0.000000 outputs   0.002040 errors  -0.002040
+pat     9 targets   1.000000 outputs   0.895295 errors   0.104705
+pat    10 targets   1.000000 outputs   0.872294 errors   0.127706
+pat    11 targets   1.000000 outputs   0.935786 errors   0.064214
+pat    12 targets   1.000000 outputs   0.991546 errors   0.008454
+pat    13 targets   0.000000 outputs   0.307520 errors  -0.307520
+pat    14 targets   1.000000 outputs   0.011932 errors   0.988068
+pat    15 targets   0.000000 outputs   0.116353 errors  -0.116353
+pat    16 targets   0.000000 outputs   0.049557 errors  -0.049557
+pat    17 targets   1.000000 outputs   0.029288 errors   0.970712
+pat    18 targets   0.000000 outputs   0.072479 errors  -0.072479
+pat    19 targets   1.000000 outputs   0.986578 errors   0.013422
+pat    20 targets   0.000000 outputs   0.013004 errors  -0.013004
+pat    21 targets   1.000000 outputs   0.313411 errors   0.686589
+pat    22 targets   1.000000 outputs   0.985822 errors   0.014178
+pat    23 targets   1.000000 outputs   0.328519 errors   0.671481
+pat    24 targets   0.000000 outputs   0.093642 errors  -0.093642
+pat    25 targets   1.000000 outputs   0.552750 errors   0.447250
+pat    26 targets   1.000000 outputs   0.740361 errors   0.259639
+pat    27 targets   0.000000 outputs   0.067552 errors  -0.067552
+pat    28 targets   0.000000 outputs   0.032802 errors  -0.032802
+pat    29 targets   1.000000 outputs   0.895194 errors   0.104806
+pat    30 targets   1.000000 outputs   0.872655 errors   0.127345
+pat    31 targets   1.000000 outputs   0.043369 errors   0.956631
+pat    32 targets   1.000000 outputs   0.987962 errors   0.012038
+pat    33 targets   1.000000 outputs   0.934353 errors   0.065647
+pat    34 targets   0.000000 outputs   0.201726 errors  -0.201726
+pat    35 targets   0.000000 outputs   0.249226 errors  -0.249226
+pat    36 targets   1.000000 outputs   0.936069 errors   0.063931
+pat    37 targets   0.000000 outputs   0.466713 errors  -0.466713
+pat    38 targets   0.000000 outputs   0.053064 errors  -0.053064
+pat    39 targets   0.000000 outputs   0.000474 errors  -0.000474
+pat    40 targets   0.000000 outputs   0.216032 errors  -0.216032
+pat    41 targets   1.000000 outputs   0.021386 errors   0.978614
+pat    42 targets   0.000000 outputs   0.032887 errors  -0.032887
+pat    43 targets   1.000000 outputs   0.419031 errors   0.580969
+pat    44 targets   0.000000 outputs   0.204353 errors  -0.204353
+pat    45 targets   1.000000 outputs   0.805533 errors   0.194467
+pat    46 targets   1.000000 outputs   0.029622 errors   0.970378
+pat    47 targets   1.000000 outputs   0.965841 errors   0.034159
+pat    48 targets   0.000000 outputs   0.172023 errors  -0.172023
+pat    49 targets   1.000000 outputs   0.947260 errors   0.052740
+pat    50 targets   1.000000 outputs   0.899092 errors   0.100908
+pat    51 targets   1.000000 outputs   0.833473 errors   0.166527
+pat    52 targets   0.000000 outputs   0.061426 errors  -0.061426
+pat    53 targets   1.000000 outputs   0.794496 errors   0.205504
+pat    54 targets   0.000000 outputs   0.059861 errors  -0.059861
+pat    55 targets   0.000000 outputs   0.029322 errors  -0.029322
+pat    56 targets   1.000000 outputs   0.709451 errors   0.290549
+pat    57 targets   1.000000 outputs   0.857118 errors   0.142882
+pat    58 targets   0.000000 outputs   0.087146 errors  -0.087146
+pat    59 targets   1.000000 outputs   0.952765 errors   0.047235
+pat    60 targets   0.000000 outputs   0.072547 errors  -0.072547
+pat    61 targets   1.000000 outputs   0.058549 errors   0.941451
+pat    62 targets   0.000000 outputs   0.594703 errors  -0.594703
+pat    63 targets   1.000000 outputs   0.015219 errors   0.984781
+pat    64 targets   0.000000 outputs   0.174550 errors  -0.174550
+pat    65 targets   0.000000 outputs   0.012492 errors  -0.012492
+pat    66 targets   0.000000 outputs   0.275745 errors  -0.275745
+pat    67 targets   0.000000 outputs   0.028315 errors  -0.028315
+pat    68 targets   0.000000 outputs   0.037071 errors  -0.037071
+pat    69 targets   0.000000 outputs   0.004640 errors  -0.004640
+pat    70 targets   1.000000 outputs   0.865778 errors   0.134222
+pat    71 targets   0.000000 outputs   0.160916 errors  -0.160916
+pat    72 targets   1.000000 outputs   0.957446 errors   0.042554
+pat    73 targets   0.000000 outputs   0.017118 errors  -0.017118
+pat    74 targets   1.000000 outputs   0.901181 errors   0.098819
+pat    75 targets   0.000000 outputs   0.193311 errors  -0.193311
+pat    76 targets   0.000000 outputs   0.010707 errors  -0.010707
+pat    77 targets   0.000000 outputs   0.599486 errors  -0.599486
+pat    78 targets   1.000000 outputs   0.969601 errors   0.030399
+pat    79 targets   0.000000 outputs   0.043650 errors  -0.043650
+pat    80 targets   1.000000 outputs   0.469191 errors   0.530809
+pat    81 targets   1.000000 outputs   0.992445 errors   0.007555
+pat    82 targets   0.000000 outputs   0.141634 errors  -0.141634
+pat    83 targets   1.000000 outputs   0.973446 errors   0.026554
+pat    84 targets   0.000000 outputs   0.451017 errors  -0.451017
+pat    85 targets   0.000000 outputs   0.917499 errors  -0.917499
+pat    86 targets   1.000000 outputs   0.933448 errors   0.066552
+pat    87 targets   0.000000 outputs   0.015888 errors  -0.015888
+pat    88 targets   0.000000 outputs   0.007191 errors  -0.007191
+pat    89 targets   1.000000 outputs   0.953195 errors   0.046805
+pat    90 targets   1.000000 outputs   0.597740 errors   0.402260
+pat    91 targets   0.000000 outputs   0.211288 errors  -0.211288
+pat    92 targets   0.000000 outputs   0.111941 errors  -0.111941
+pat    93 targets   1.000000 outputs   0.686481 errors   0.313519
+pat    94 targets   1.000000 outputs   0.552819 errors   0.447181
+pat    95 targets   1.000000 outputs   0.962252 errors   0.037748
+pat    96 targets   1.000000 outputs   0.915696 errors   0.084304
+pat    97 targets   0.000000 outputs   0.016598 errors  -0.016598
+pat    98 targets   0.000000 outputs   0.962954 errors  -0.962954
+pat    99 targets   0.000000 outputs   0.504587 errors  -0.504587
+pat   100 targets   0.000000 outputs   0.018099 errors  -0.018099
+pat   101 targets   1.000000 outputs   0.993786 errors   0.006214
+pat   102 targets   1.000000 outputs   0.843982 errors   0.156018
+pat   103 targets   1.000000 outputs   0.745984 errors   0.254016
+pat   104 targets   0.000000 outputs   0.024470 errors  -0.024470
+pat   105 targets   1.000000 outputs   0.987697 errors   0.012303
+pat   106 targets   1.000000 outputs   0.931913 errors   0.068087
+pat   107 targets   1.000000 outputs   0.059579 errors   0.940421
+pat   108 targets   1.000000 outputs   0.867920 errors   0.132080
+pat   109 targets   1.000000 outputs   0.835969 errors   0.164031
+pat   110 targets   0.000000 outputs   0.856880 errors  -0.856880
+pat   111 targets   0.000000 outputs   0.755179 errors  -0.755179
+pat   112 targets   1.000000 outputs   0.014078 errors   0.985922
+pat   113 targets   0.000000 outputs   0.040037 errors  -0.040037
+pat   114 targets   1.000000 outputs   0.997002 errors   0.002998
+pat   115 targets   0.000000 outputs   0.023372 errors  -0.023372
+pat   116 targets   0.000000 outputs   0.005878 errors  -0.005878
+pat   117 targets   1.000000 outputs   0.144998 errors   0.855002
+pat   118 targets   0.000000 outputs   0.102386 errors  -0.102386
+pat   119 targets   0.000000 outputs   0.020389 errors  -0.020389
+pat   120 targets   1.000000 outputs   0.712014 errors   0.287986
+pat   121 targets   0.000000 outputs   0.013322 errors  -0.013322
+pat   122 targets   0.000000 outputs   0.198767 errors  -0.198767
+pat   123 targets   0.000000 outputs   0.259583 errors  -0.259583
+pat   124 targets   1.000000 outputs   0.973988 errors   0.026012
+pat   125 targets   1.000000 outputs   0.506730 errors   0.493270
+pat   126 targets   1.000000 outputs   0.756669 errors   0.243331
+pat   127 targets   1.000000 outputs   0.979389 errors   0.020611
+pat   128 targets   1.000000 outputs   0.971731 errors   0.028269
+pat   129 targets   0.000000 outputs   0.583007 errors  -0.583007
+pat   130 targets   0.000000 outputs   0.002905 errors  -0.002905
+pat   131 targets   1.000000 outputs   0.127777 errors   0.872223
+pat   132 targets   0.000000 outputs   0.245214 errors  -0.245214
+pat   133 targets   0.000000 outputs   0.056700 errors  -0.056700
+pat   134 targets   1.000000 outputs   0.712690 errors   0.287310
+pat   135 targets   1.000000 outputs   0.631735 errors   0.368265
+pat   136 targets   1.000000 outputs   0.086899 errors   0.913101
+pat   137 targets   1.000000 outputs   0.966597 errors   0.033403
+pat   138 targets   0.000000 outputs   0.397244 errors  -0.397244
+pat   139 targets   0.000000 outputs   0.058031 errors  -0.058031
+pat   140 targets   0.000000 outputs   0.160786 errors  -0.160786
+pat   141 targets   0.000000 outputs   0.075698 errors  -0.075698
+pat   142 targets   0.000000 outputs   0.113645 errors  -0.113645
+pat   143 targets   0.000000 outputs   0.025541 errors  -0.025541
+pat   144 targets   0.000000 outputs   0.014426 errors  -0.014426
+pat   145 targets   0.000000 outputs   0.044458 errors  -0.044458
+pat   146 targets   0.000000 outputs   0.976392 errors  -0.976392
+pat   147 targets   0.000000 outputs   0.038381 errors  -0.038381
+pat   148 targets   1.000000 outputs   0.952427 errors   0.047573
+pat   149 targets   0.000000 outputs   0.570738 errors  -0.570738
+pat   150 targets   0.000000 outputs   0.016268 errors  -0.016268
+pat   151 targets   1.000000 outputs   0.910758 errors   0.089242
+pat   152 targets   1.000000 outputs   0.020492 errors   0.979508
+pat   153 targets   1.000000 outputs   0.893542 errors   0.106458
+pat   154 targets   1.000000 outputs   0.849841 errors   0.150159
+pat   155 targets   0.000000 outputs   0.072045 errors  -0.072045
+pat   156 targets   0.000000 outputs   0.096142 errors  -0.096142
+pat   157 targets   0.000000 outputs   0.153355 errors  -0.153355
+pat   158 targets   0.000000 outputs   0.003075 errors  -0.003075
+pat   159 targets   0.000000 outputs   0.014819 errors  -0.014819
+pat   160 targets   0.000000 outputs   0.053360 errors  -0.053360
+pat   161 targets   0.000000 outputs   0.006064 errors  -0.006064
+pat   162 targets   1.000000 outputs   0.870938 errors   0.129062
+pat   163 targets   1.000000 outputs   0.876759 errors   0.123241
+pat   164 targets   0.000000 outputs   0.145205 errors  -0.145205
+pat   165 targets   0.000000 outputs   0.356459 errors  -0.356459
+pat   166 targets   0.000000 outputs   0.090780 errors  -0.090780
+pat   167 targets   0.000000 outputs   0.100901 errors  -0.100901
+pat   168 targets   0.000000 outputs   0.826884 errors  -0.826884
+pat   169 targets   1.000000 outputs   0.743443 errors   0.256557
+pat   170 targets   1.000000 outputs   0.961366 errors   0.038634
+pat   171 targets   0.000000 outputs   0.056182 errors  -0.056182
+pat   172 targets   0.000000 outputs   0.047713 errors  -0.047713
+pat   173 targets   0.000000 outputs   0.002818 errors  -0.002818
+pat   174 targets   1.000000 outputs   0.664493 errors   0.335507
+pat   175 targets   1.000000 outputs   0.978744 errors   0.021256
+pat   176 targets   0.000000 outputs   0.125717 errors  -0.125717
+pat   177 targets   1.000000 outputs   0.858399 errors   0.141601
+pat   178 targets   0.000000 outputs   0.012725 errors  -0.012725
+pat   179 targets   1.000000 outputs   0.683788 errors   0.316212
+pat   180 targets   1.000000 outputs   0.019675 errors   0.980325
+pat   181 targets   0.000000 outputs   0.110112 errors  -0.110112
+pat   182 targets   1.000000 outputs   0.395422 errors   0.604578
+pat   183 targets   0.000000 outputs   0.077831 errors  -0.077831
+pat   184 targets   0.000000 outputs   0.005090 errors  -0.005090
+pat   185 targets   1.000000 outputs   0.021775 errors   0.978225
+pat   186 targets   0.000000 outputs   0.197657 errors  -0.197657
+pat   187 targets   0.000000 outputs   0.059924 errors  -0.059924
+pat   188 targets   1.000000 outputs   0.902271 errors   0.097729
+pat   189 targets   0.000000 outputs   0.017922 errors  -0.017922
+pat   190 targets   1.000000 outputs   0.728301 errors   0.271699
+pat   191 targets   0.000000 outputs   0.142647 errors  -0.142647
+pat   192 targets   0.000000 outputs   0.068461 errors  -0.068461
+pat   193 targets   0.000000 outputs   0.007758 errors  -0.007758
+pat   194 targets   1.000000 outputs   0.548355 errors   0.451645
+pat   195 targets   0.000000 outputs   0.014848 errors  -0.014848
+pat   196 targets   0.000000 outputs   0.208393 errors  -0.208393
+pat   197 targets   0.000000 outputs   0.041183 errors  -0.041183
+pat   198 targets   1.000000 outputs   0.713178 errors   0.286822
+pat   199 targets   1.000000 outputs   0.971529 errors   0.028471
+pat   200 targets   0.000000 outputs   0.283768 errors  -0.283768
+pat   201 targets   0.000000 outputs   0.212295 errors  -0.212295
+pat   202 targets   1.000000 outputs   0.974260 errors   0.025740
+pat   203 targets   0.000000 outputs   0.001592 errors  -0.001592
+pat   204 targets   0.000000 outputs   0.074759 errors  -0.074759
+pat   205 targets   1.000000 outputs   0.937129 errors   0.062871
+pat   206 targets   0.000000 outputs   0.024263 errors  -0.024263
+pat   207 targets   0.000000 outputs   0.358732 errors  -0.358732
+pat   208 targets   1.000000 outputs   0.948871 errors   0.051129
+pat   209 targets   1.000000 outputs   0.984451 errors   0.015549
+pat   210 targets   1.000000 outputs   0.952660 errors   0.047340
+pat   211 targets   1.000000 outputs   0.910133 errors   0.089867
+pat   212 targets   0.000000 outputs   0.056186 errors  -0.056186
+pat   213 targets   0.000000 outputs   0.029706 errors  -0.029706
+pat   214 targets   0.000000 outputs   0.331515 errors  -0.331515
+pat   215 targets   0.000000 outputs   0.071134 errors  -0.071134
+pat   216 targets   0.000000 outputs   0.005174 errors  -0.005174
+pat   217 targets   1.000000 outputs   0.978041 errors   0.021959
+pat   218 targets   0.000000 outputs   0.047161 errors  -0.047161
+pat   219 targets   1.000000 outputs   0.980424 errors   0.019576
+pat   220 targets   0.000000 outputs   0.592026 errors  -0.592026
+pat   221 targets   0.000000 outputs   0.065270 errors  -0.065270
+pat   222 targets   1.000000 outputs   0.841854 errors   0.158146
+pat   223 targets   0.000000 outputs   0.221563 errors  -0.221563
+pat   224 targets   0.000000 outputs   0.037085 errors  -0.037085
+pat   225 targets   0.000000 outputs   0.079941 errors  -0.079941
+Best epoch   174 validate   0.356396 test   0.356396 fracCorr   0.844444 Rsq   0.600571
+
+Weights
+0.943086
+-0.449346
+-0.745014
+-1.103962
+-1.002048
+0.366038
+0.031143
+-0.012918
+0.441075
+1.042232
+-1.135235
+1.102521
+0.324503
+0.767053
+-1.136391
+-1.053448
+1.072791
+-1.478984
+-1.123098
+-0.950964
+-0.648114
+
+0.122254
+0.055313
+-1.338470
+0.394263
+-0.174725
+-2.270093
+-1.010593
+0.665884
+-1.028848
+-1.729829
+0.374912
+1.316872
+0.663360
+1.167839
+0.015945
+1.906838
+0.841714
+-0.542571
+-1.734414
+-0.888848
+-1.226459
+
+1.405420
+3.937265
+0.568244
+1.239938
+2.540209
+1.347374
+1.978596
+0.074420
+4.025173
+-3.341727
+1.704766
+-3.810666
+1.889012
+2.517132
+-2.869967
+-2.337814
+-2.172957
+-0.504588
+-1.882491
+0.271108
+2.845006
+
+-2.750479
+-0.974431
+0.436258
+3.513551
+1.004281
+-0.113214
+-1.117741
+2.009140
+-0.006760
+-2.884762
+-0.359362
+-0.453857
+0.808466
+1.543631
+0.167600
+-1.128459
+3.650111
+-4.835623
+0.410889
+-0.562376
+3.194152
+
+-3.122986
+2.432852
+0.055376
+1.899168
+1.454414
+-2.899811
+-1.847263
+1.926677
+0.254998
+0.900313
+0.245095
+-4.847353
+2.100650
+2.433290
+-0.162191
+-0.933573
+-1.026973
+-0.253826
+-0.781111
+5.414382
+3.038990
+
+0.201437
+0.268031
+-0.545795
+-0.605564
+-0.911350
+-0.331870
+-0.033723
+-0.713230
+-0.520264
+-0.411650
+0.115017
+0.044371
+0.456735
+-0.368050
+-0.535028
+-0.545299
+0.550173
+-0.825516
+-0.991854
+0.037951
+-0.205088
+
+0.578993
+-3.668167
+-0.864356
+-1.628179
+-0.946733
+-1.480176
+4.615397
+-0.206730
+1.625759
+5.614037
+3.933148
+-2.857015
+-1.670598
+-5.808959
+-0.207483
+1.186903
+-0.193071
+1.757938
+-3.248916
+-5.999675
+-1.864464
+
+-0.481483
+0.532046
+-1.633390
+-3.279379
+-0.478636
+1.401632
+0.719859
+-0.642495
+1.617840
+2.739218
+-0.835736
+0.543796
+-0.951617
+0.255500
+-4.334717
+-1.148666
+3.340476
+-0.211190
+-1.443115
+1.670650
+3.001787
+
+0.793541
+0.150760
+0.298899
+2.469206
+0.853031
+-0.777094
+-1.641283
+-1.195311
+-2.016718
+-1.914858
+0.459974
+-0.414808
+-0.628797
+0.115822
+1.689309
+1.905023
+-1.058719
+1.936085
+0.934141
+-0.472337
+1.465896
+
+1.315640
+-2.815805
+-1.706523
+0.202853
+-0.222800
+0.058215
+4.367700
+2.922393
+-3.240403
+0.714760
+-4.988014
+0.553852
+-2.464629
+5.034687
+2.409441
+1.036050
+-2.439631
+-4.192749
+-1.464000
+1.879630
+-1.568459
+
+0.080958
+0.601506
+-0.814322
+-0.568514
+0.527935
+-1.316636
+-0.619899
+0.625305
+-0.164357
+0.823515
+0.042042
+0.179906
+-0.114814
+1.139458
+-0.077494
+0.667709
+0.452973
+-0.080450
+-1.105590
+-0.591133
+-0.454381
+
+-2.595049
+1.412605
+-0.011597
+-3.325634
+-0.655369
+-0.600208
+2.240669
+2.236097
+1.547170
+1.483542
+0.466206
+0.807980
+1.717924
+0.382018
+-1.198620
+1.220498
+0.899459
+-2.493149
+-2.431859
+0.544289
+-1.571272
+
+5.144465
+-4.085195
+-3.920454
+-0.036866
+-1.005366
+-1.208383
+-0.258574
+-3.286498
+1.900505
+-1.766794
+0.584790
+1.951127
+-1.706352
+0.204356
+-0.139669
+-0.214492
+4.044240
+-2.282544
+-0.414058
+2.477713
+2.809027
+
+-0.065864
+3.210711
+1.786365
+1.083463
+1.283725
+-1.925157
+0.280741
+-0.846339
+4.854077
+-4.253363
+-1.604799
+-1.117207
+2.956209
+5.034408
+-0.027437
+-1.651942
+-0.210528
+0.215590
+-1.866730
+4.236116
+1.845966
+
+2.480194
+-0.054456
+-2.736307
+-0.813587
+1.052604
+-1.531817
+-0.576657
+-0.565593
+3.071525
+-1.474615
+0.618831
+2.349061
+-1.913643
+2.760878
+0.733206
+0.527390
+3.877447
+-3.678683
+-3.022624
+2.168794
+1.735703
+
+-2.739201
+0.719119
+-0.024569
+0.565708
+0.870051
+-0.133079
+4.137634
+0.233288
+-0.043607
+-1.586138
+-0.239505
+-3.923743
+-1.656807
+3.974793
+-2.596631
+-1.127314
+-3.345404
+0.794235
+1.355143
+2.817914
+4.170873
+
+2.101300
+-1.967275
+-1.353505
+-2.189972
+-0.155729
+3.340281
+-4.053761
+-5.650449
+2.552222
+1.160969
+1.072230
+-0.421522
+-0.229024
+0.084891
+-4.378409
+-0.184436
+-0.308662
+0.672597
+-1.718517
+1.525614
+3.948171
+
+-1.122774
+-0.346832
+-0.156395
+-0.859430
+0.642212
+2.134756
+-0.462196
+2.270367
+-1.909320
+-1.185583
+-1.822259
+1.796301
+1.047040
+-0.340139
+-0.131296
+1.137887
+1.098048
+-0.227850
+1.074740
+-0.165864
+0.522349
+
+-3.827787
+4.007937
+1.854875
+-1.754705
+0.515466
+1.575592
+-0.164746
+1.256494
+-0.187218
+1.362045
+-0.345244
+1.173869
+1.441992
+0.072209
+0.473304
+0.685672
+-2.934563
+-0.265365
+-2.469053
+-0.051031
+-0.204854
+
+0.486743
+-1.456543
+1.025953
+3.365131
+0.924912
+1.365084
+1.691857
+-0.085075
+1.652482
+5.356120
+1.902235
+2.121002
+4.741545
+0.099884
+2.654052
+-3.111132
+2.624382
+-0.051145
+-2.951394
+4.007947
+-5.902380
+
+1.623772
+1.411709
+-0.089365
+0.930021
+2.072419
+-0.210152
+1.597116
+0.529778
+1.998218
+-0.470790
+0.673578
+-1.724651
+0.691464
+0.251930
+-2.201511
+-1.098635
+-1.339952
+0.828808
+-0.720207
+-1.871789
+2.320577
+
+2.403725
+1.061735
+-1.737703
+2.523080
+-1.568786
+1.040305
+-4.511337
+-1.754856
+0.824341
+1.306077
+-1.381653
+-1.608502
+-1.547519
+-0.244514
+-3.185332
+-2.189408
+1.604172
+1.396958
+4.939794
+-1.274692
+2.240257
+
+-1.327488
+-0.241680
+-1.055884
+1.995870
+-0.992001
+-3.769219
+0.704694
+-0.319547
+-2.675644
+-0.794445
+-2.426293
+0.992612
+1.526056
+-1.223839
+1.312617
+1.122633
+-0.644174
+2.456456
+1.137637
+-0.977209
+-0.298478
+
+2.010104
+0.372795
+0.060873
+-0.185435
+-0.629359
+1.820777
+-0.733231
+2.031590
+1.676122
+4.297902
+1.098914
+3.145484
+1.526870
+0.556319
+0.550125
+-0.211739
+-0.740449
+-3.523091
+-1.588614
+-0.531752
+-3.858511
+
+0.692797
+6.199896
+3.688577
+3.579542
+4.838434
+-4.646471
+-3.845390
+-1.622047
+2.735031
+3.177956
+3.182543
+-2.393272
+4.153656
+-1.052741
+-2.711609
+-0.236667
+-2.093134
+-1.189418
+-3.033554
+3.561170
+4.018850
+
+1.728846
+0.654006
+1.669141
+1.000666
+-2.311643
+1.676016
+-2.215589
+1.555331
+-1.025389
+-0.880936
+-2.028547
+-0.223049
+0.936205
+1.453055
+-0.338994
+0.194909
+-1.200929
+0.087373
+1.357032
+3.916631
+-0.388354
+
+-0.408038
+0.532702
+1.009142
+1.111719
+0.456329
+-0.122850
+-0.094221
+-0.088340
+0.603324
+-0.260145
+-0.540272
+-0.778664
+0.588760
+0.733175
+-0.088540
+-0.651484
+-0.134844
+-0.223814
+-0.564967
+0.544127
+-0.349575
+
+-3.162886
+-8.314507
+-4.284864
+0.240122
+-1.287006
+6.913357
+2.608862
+-0.130860
+-2.370795
+2.439140
+0.423724
+2.789941
+-1.818491
+-5.435439
+2.180881
+-0.796206
+-0.354202
+4.655259
+-0.011570
+-5.542304
+-1.111798
+
+
+-0.341048
+-0.416271
+-0.876221
+-0.673144
+-0.560090
+-0.077162
+1.389059
+0.883579
+0.488928
+1.156985
+-0.127789
+-0.632392
+1.173607
+-0.759659
+1.104874
+-0.890355
+1.106011
+-0.436509
+-0.484283
+-1.131053
+-0.461013
+0.915390
+-0.750684
+-0.819374
+-1.180575
+-0.614654
+0.141297
+1.265686
+0.123010
+

@@ -1,0 +1,5 @@
+cc charge.c -lm
+./a.out ../NNin/train.dat 1.NN1in
+./a.out ../NNin/validate.dat 2.NN1in
+./a.out ../NNin/test.dat 3.NN1in
+

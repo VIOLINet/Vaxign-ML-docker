@@ -1,0 +1,7 @@
+-ninput 25 -noutputs 1
+-nhiddens1 30 
+-dat query.h.NN1in
+-net ../../SPAAN/hdr/data.net
+-output_file query.h.NN2in
+-end
+

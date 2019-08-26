@@ -1,0 +1,17 @@
+echo Dipeptide analysis is going on......
+./querydipep.o ../NN1in/train.dat 1.NN1in
+./querydipep.o ../NN1in/validate.dat 2.NN1in
+./querydipep.o ../NN1in/test.dat 3.NN1in
+echo
+echo Network is being trained....
+./train.o spec.data >data.net
+echo Network trained.
+echo
+echo Producing input data for second layer of neural network....
+./recognize.o spec.reco1 >1.tmp
+./recognize.o spec.reco2 >1.tmp
+./recognize.o spec.reco3 >1.tmp
+rm -f a.out *.NN1in 1.tmp
+echo
+echo Dipeptide analysis done.....
+echo

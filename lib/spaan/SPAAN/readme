@@ -1,0 +1,24 @@
+SPAAN: A Software for Prediction of Adhesins and Adhesin-like proteins using Neural networks
+Gaurav Sachdeva1, Kaushal Kumar1, Preti Jain1, Srinivasan Ramachandran*
+Copyright by authors.
+
+Specifications:
+	Operating System: Red Hat Linux version 7.3 or above.
+
+Instrucions :
+
+	1. Please download the software and run in your local directory. Do not attempt to operate the software from remote location.
+	2. Sequence should be in FASTA format. Multiple sequences can be present in the input file.
+	3. The input file should be named as 'query.dat'.
+	4. The command to run the software SPAAN is './askquery'.
+	5. The output data is stored in 'query.out'.
+		Sample output :
+SN	Pad-value	Protein Name (Annotation, first line of FASTA format)
+1	0.115204	>gi|21240775|ref|NP_640357.1| chromosomal replication initiator [Xanthomonas axonopodis pv. citri str. 306]
+2	0.111160	>gi|21240776|ref|NP_640358.1| DNA polymerase III beta chain [Xanthomonas axonopodis pv. citri str. 306]
+3	0.213852	>gi|21240777|ref|NP_640359.1| DNA replication and repair RecF protein [Xanthomonas axonopodis pv. citri str. 306]
+4	0.086199	>gi|21240778|ref|NP_640360.1| DNA gyrase subunit B [Xanthomonas axonopodis pv. citri str. 306]
+5	0.496217	>gi|21240779|ref|NP_640361.1| conserved hypothetical protein [Xanthomonas axonopodis pv. citri str. 306]
+6	0.419991	>gi|21240780|ref|NP_640362.1| conserved hypothetical protein [Xanthomonas axonopodis pv. citri str. 306]
+
+Help: ramu@igib.res.in, ramucbt@yahoo.com

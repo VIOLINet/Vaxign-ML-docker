@@ -1,0 +1,7 @@
+cc recognize.c -lm
+./a.out spec.reco1
+./a.out spec.reco2
+./a.out spec.reco3
+rm -f a.out
+echo Done.....
+

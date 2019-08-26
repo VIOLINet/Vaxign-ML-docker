@@ -1,0 +1,6 @@
+-ninput 20 -noutputs 1
+-nhiddens1 28
+-dat 3.NN1in
+-net data.net
+-output_file 3.NN2in
+-end

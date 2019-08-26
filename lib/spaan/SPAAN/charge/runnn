@@ -1,0 +1,3 @@
+cc -lm train.c
+./a.out spec.data >data.net
+

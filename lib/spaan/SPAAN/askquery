@@ -1,0 +1,28 @@
+echo standardization going on...
+cp query.dat query.fasta
+./standard.o query.fasta
+mv query.std query.ext
+echo filteration going on...
+./filter.o query.ext 
+./annotate.o query.flt 1gi|
+rm -f query.ext query.fasta
+
+echo recognition going on...
+cd AAcompo/
+./AAcompo.o ../query.ant query.NN1in
+./recognize.o spec.reco
+cd ../charge/
+./charge.o ../query.ant query.NN1in
+./recognize.o spec.reco
+cd ../hdr/
+./hdr.o ../query.ant query.NN1in
+./recognize.o spec.reco
+cd ../multiplets/
+./multiplets.o ../query.ant query.NN1in
+./recognize.o spec.reco
+cd ../dipep/
+./querydipep.o ../query.ant query.NN1in
+./recognize.o spec.reco
+cd ..
+./finalp1.o AAcompo/query.NN2in charge/query.NN2in hdr/query.NN2in multiplets/query.NN2in dipep/query.NN2in query.flt query.out
+rm -f query.ant query.flt

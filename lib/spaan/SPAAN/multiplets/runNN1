@@ -1,0 +1,20 @@
+echo Multiplets analysis is going on......
+cc multiplets.c
+./a.out ../NN1in/train.dat 1.NN1in
+./a.out ../NN1in/validate.dat 2.NN1in
+./a.out ../NN1in/test.dat 3.NN1in
+echo
+echo Network is being trained....
+cc -lm train.c
+./a.out spec.data >data.net
+echo Network trained.
+echo
+echo Producing input data for second layer of neural network....
+cc recognize.c -lm
+./a.out spec.reco1 >1.tmp
+./a.out spec.reco2 >1.tmp
+./a.out spec.reco3 >1.tmp
+rm -f a.out *.NN1in 1.tmp
+echo
+echo Multiplets analysis done.
+echo

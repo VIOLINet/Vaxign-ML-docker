@@ -1,0 +1,7 @@
+-ninput 20 -noutputs 1
+-nhiddens1 30
+-dat query.A.NN1in
+-net ../../SPAAN/AAcompo/data.net
+-output_file query.A.NN2in
+-end
+

@@ -1,0 +1,4 @@
+SN		Pad-value	Protein Name (Annotation, first line of FASTA format)
+1		0.721128	>gi|73490166|gb|BAE19781|hemagglutinin [Influenza B virus]
+2		0.721128	>1
+3		0.722860	>2

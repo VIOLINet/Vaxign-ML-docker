@@ -1,0 +1,6 @@
+-ninput 20 -noutputs 1
+-nhiddens1 28
+-dat query.d.NN1in
+-net ../../SPAAN/dipep/data.net
+-output_file query.d.NN2in
+-end

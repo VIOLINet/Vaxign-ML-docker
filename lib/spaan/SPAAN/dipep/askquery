@@ -1,0 +1,3 @@
+./querydipep.o query.dat query.NN1in
+./recognize.o spec.reco
+
