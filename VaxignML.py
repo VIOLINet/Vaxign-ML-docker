@@ -146,7 +146,7 @@ class VaxignML:
             featureDir = os.path.join( args.outputDir, "_FEATURE" )
             if not os.path.exists( featureDir ):
                 os.mkdir( featureDir )
-            
+                
             incFeatures = []
             incFeatures.append( "psortb" )
             Feature.run_psortb( args.inputFasta, featureDir, args.organism, args.multiFlag, args.process, args.rawFlag )

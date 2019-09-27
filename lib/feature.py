@@ -75,6 +75,10 @@ class Feature:
         
         sequenceIDs = readfasta.readFastaDesc( inputFasta, key="full" )
         
+        for file in os.listdir( rawOutput ):
+                if 'psortb_grampos.txt' in file:
+                    os.remove( os.path.join( rawOutput, file ) )
+        
         if organism.lower() in ["gram+","g+"]:
             os.system( "%s -p -i %s" % (command, inputFasta) )
             for file in os.listdir( rawOutput ):
@@ -93,7 +97,7 @@ class Feature:
         locs = ["Extracellular", "CytoplasmicMembrane", "Cytoplasmic","Cellwall","Periplasmic","OuterMembrane"]
         values = {}
         for entry in re.split( '[-]{79}',open( os.path.join( rawOutput, rawFile ) ).read() )[:-1]:
-            fastaID = entry.strip().split( '\n' )[0][7:]
+            fastaID = entry.strip().split( '\n' )[0][7:].strip()
             value = [""]+["0.0"]*(len(locs))
             value[0] = re.split( '[ ]+', entry[entry.find( "Final Prediction:" ):].split( '\n' )[1] )[1]
             for row in entry[entry.find( "Localization Scores:" ):entry.find( "Final Prediction:" )].split( '\n' )[1:-1]:
