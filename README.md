@@ -7,7 +7,7 @@ Vaxign-ML is a supervised machine learning classification to predict protective 
 ## Installation 
 (Docker version >=1.13.1, API version >=1.26)
 
-$ docker pull e4ong1031/vaxign-ml:v1.0
+$ docker pull e4ong1031/vaxign-ml:latest
 
 $ wget https://raw.githubusercontent.com/VIOLINet/Vaxign-ML-docker/master/VaxignML.sh
 
