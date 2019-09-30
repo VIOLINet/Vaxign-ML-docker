@@ -1,6 +1,6 @@
 -ninput 20 -noutputs 1
 -nhiddens1 28
--dat query.m.NN1in
--net ../../SPAAN/multiplets/data.net
--output_file query.m.NN2in
+-dat query.NN1in
+-net data.net
+-output_file query.NN2in
 -end

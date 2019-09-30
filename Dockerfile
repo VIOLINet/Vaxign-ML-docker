@@ -12,6 +12,23 @@ WORKDIR /app
 
 COPY . /app
 
+WORKDIR /app/lib/spaan/SPAAN
+RUN gcc -o standard.o standard.c -lm -w
+RUN gcc -o filter.o filter.c -lm -w
+RUN gcc -o annotate.o annotate.c -lm -w
+RUN gcc -o AAcompo/AAcompo.o AAcompo/AAcompo.c -lm -w
+RUN gcc -o AAcompo/recognize.o AAcompo/recognize.c -lm -w
+RUN gcc -o charge/charge.o charge/charge.c -lm -w
+RUN gcc -o charge/recognize.o charge/recognize.c -lm -w
+RUN gcc -o hdr/hdr.o hdr/hdr.c -lm -w
+RUN gcc -o hdr/recognize.o hdr/recognize.c -lm -w
+RUN gcc -o multiplets/multiplets.o multiplets/multiplets.c -lm -w
+RUN gcc -o multiplets/recognize.o multiplets/recognize.c -lm -w
+RUN gcc -o dipep/dipep.o dipep/dipep.c -lm -w
+RUN gcc -o dipep/recognize.o dipep/recognize.c -lm -w
+RUN gcc -o finalp1.o finalp1.c -lm -w
+
+WORKDIR /app
 RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:jonathonf/python-3.6

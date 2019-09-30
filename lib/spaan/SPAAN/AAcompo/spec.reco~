@@ -1,0 +1,7 @@
+-ninput 20 -noutputs 1
+-nhiddens1 30
+-dat query.NN1in
+-net /usr/local/apache2/cgi-bin/SPAAN/AAcompo/data.net
+-output_file query.NN2in
+-end
+

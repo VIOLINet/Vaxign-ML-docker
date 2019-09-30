@@ -369,8 +369,8 @@ class Feature:
             exit(1)
         if not os.path.exists( args.outputDir ):
             os.mkdir( args.outputDir )
-        if args.organism.lower() not in ["gram+","g+"]:
-            sys.stderr.write( "Incorrect organism! Please choose from: [gram+]\n" )
+        if args.organism.lower() not in ["gram+","g+","gram-","g-"]:
+            sys.stderr.write( "Incorrect organism! Please choose from: [gram+,gram-]\n" )
             exit(1)
         if args.multiFlag.lower() not in ['t','true','f','false']:
             sys.stderr.write( "Incorrect input for multi-processes! Please choose from: [T,F]\n" )

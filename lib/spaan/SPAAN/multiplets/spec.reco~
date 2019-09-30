@@ -1,0 +1,6 @@
+-ninput 20 -noutputs 1
+-nhiddens1 28
+-dat query.NN1in
+-net /usr/local/apache2/cgi-bin/SPAAN/multiplets/data.net
+-output_file query.NN2in
+-end

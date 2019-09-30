@@ -1,4 +1,3 @@
-#include<string.h>
 #include<stdio.h>
 #define M 15000
 #define N 15000

@@ -1,0 +1,5 @@
+-ninput 20 -noutputs 1
+-nhiddens1 28
+-net /usr/local/apache2/htdocs/faap/SPAAN/dipep/data.net
+-end
+
