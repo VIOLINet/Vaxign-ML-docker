@@ -19,3 +19,21 @@ $ ./VaxignML.sh [INPUT_FASTA] [OUTPUT_DIRECTORY] [ORGANISM_TYPE]
 
 ## Docker
 https://hub.docker.com/r/e4ong1031/vaxign-ml
+
+## Custom training data
+
+$ docker pull e4ong1031/vaxign-ml:latest
+
+$ wget https://raw.githubusercontent.com/VIOLINet/Vaxign-ML-docker/master/Train.sh
+
+$ chmod a+x Train.sh
+
+$ ./Train.sh [POSITIVE_FASTA] [NEGATIVE_FASTA] [OUTPUT_MODEL_DIRECTORY] [ORGANISM_TYPE]
+
+$ wget https://raw.githubusercontent.com/VIOLINet/Vaxign-ML-docker/master/VaxignML.sh
+
+$ chmod a+x VaxignML.sh
+
+$ ./VaxignML.sh [INPUT_FASTA] [OUTPUT_DIRECTORY] [ORGANISM_TYPE] [TRAIN_MODEL_DIRECTORY]
+
+

@@ -76,18 +76,18 @@ class VaxignML:
             output.append( "\t".join( masterData[fastaID] ) )
         open( os.path.join( outputDir, "%s.input.tsv" % Path( inputFasta ).stem  ), 'w' ).write( '\n'.join( output ) )
         
-    def predict( self, inputFasta, outputDir ):
+    def predict( self, inputFasta, outputDir, modelDir ):
         inputFile = os.path.join( outputDir, "%s.input.tsv" % Path( inputFasta ).stem  )
         
         if (sys.version_info > (3, 0)):
-            scaler = joblib.load( os.path.join( MODEL_PATH, "Scaler.sav" ) )
-            vaxignML = joblib.load( os.path.join( MODEL_PATH, "VaxignML.sav" ) )
-            scores = joblib.load( os.path.join( MODEL_PATH, "VaxignML.scores" ) )
+            scaler = joblib.load( os.path.join( modelDir, "Scaler.sav" ) )
+            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML.sav" ) )
+            scores = joblib.load( os.path.join( modelDir, "VaxignML.scores" ) )
         else:
-            scaler = joblib.load( os.path.join( MODEL_PATH, "Scaler.sav.2" ) )
-            vaxignML = joblib.load( os.path.join( MODEL_PATH, "VaxignML.sav.2" ) )
-            scores = joblib.load( os.path.join( MODEL_PATH, "VaxignML.scores.2" ) )
-
+            scaler = joblib.load( os.path.join( modelDir, "Scaler.sav.2" ) )
+            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML.sav.2" ) )
+            scores = joblib.load( os.path.join( modelDir, "VaxignML.scores.2" ) )
+        
         labels = open( inputFile ).read().splitlines()[0].split( '\t' )[1:]
         samples = []
         X = np.array( [] ).reshape( 0, len( labels ) )
@@ -118,6 +118,13 @@ class VaxignML:
             exit(1)
         if not os.path.exists( args.outputDir ):
             os.mkdir( args.outputDir )
+        if not ( os.path.exists( args.savedModel ) 
+            and os.path.exists( os.path.join( args.savedModel, "Scaler.sav" ) )
+            and os.path.exists( os.path.join( args.savedModel, "VaxignML.sav" ) )
+            and os.path.exists( os.path.join( args.savedModel, "VaxignML.scores" ) )
+            ):
+            sys.stderr.write( "Unable to find previous train model! Please check your input.\n" )
+            exit(1)
         if args.organism.lower() not in ["gram+","g+","gram-","g-"]:
             sys.stderr.write( "Incorrect organism! Please choose from: [gram+,gram-]\n" )
             exit(1)
@@ -133,10 +140,11 @@ class VaxignML:
     
     def main( self ):
         try:
-            parser = argparse.ArgumentParser( description="Create input data matrix from compute sequences' features in fasta format for Vaxign Prediction." )
+            parser = argparse.ArgumentParser( description="Vaxign-ML predicts bacterial protective antigens." )
             parser.add_argument( "--input", '-i', dest='inputFasta', required=True )
             parser.add_argument( "--output", '-o', dest='outputDir', required=True )
             parser.add_argument( "--organismtype", '-t', dest='organism', required=True)
+            parser.add_argument( "--savedModel", '-s', dest='savedModel', default=MODEL_PATH )
             parser.add_argument( "--multi", '-m', dest='multiFlag', default="True" )
             parser.add_argument( "--process", '-p', dest='process', type=int, default=int(multiprocessing.cpu_count()/2) )
             parser.add_argument( "--raw", '-r', dest='rawFlag', default="False" )
@@ -146,7 +154,7 @@ class VaxignML:
             featureDir = os.path.join( args.outputDir, "_FEATURE" )
             if not os.path.exists( featureDir ):
                 os.mkdir( featureDir )
-                
+            
             incFeatures = []
             incFeatures.append( "psortb" )
             Feature.run_psortb( args.inputFasta, featureDir, args.organism, args.multiFlag, args.process, args.rawFlag )
@@ -166,7 +174,7 @@ class VaxignML:
             if args.rawFlag.lower() in ['f','false']:
                 shutil.rmtree( featureDir )
             
-            self.predict( args.inputFasta, args.outputDir )
+            self.predict( args.inputFasta, args.outputDir, args.savedModel )
             
         except:
             print( sys.exc_info() )
