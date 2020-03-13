@@ -31,7 +31,7 @@ RUN gcc -o finalp1.o finalp1.c -lm -w
 WORKDIR /app
 RUN apt-get update
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:jonathonf/python-3.6
+RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update
 RUN apt-get install -y python3.6 python3-pip
 RUN python3.6 -m pip install --trusted-host numpy==1.14.2 scipy==1.2.1 scikit-learn==0.20.3 xgboost==0.81 biopython==1.72 matplotlib==2.2.2 pandas==0.20.3 pathlib

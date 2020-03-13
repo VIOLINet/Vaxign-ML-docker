@@ -32,30 +32,52 @@ class VaxignML:
 
     def makeInput( self, inputFasta, outputDir, organism, incFeatures ):
         featureDir = os.path.join( outputDir, "_FEATURE" )
-        masterLabels = ["ID", "Gram"]
-        masterData = {}
-
-        sequenceIDs = readfasta.readFastaDesc( inputFasta, key="full" )
-        if organism.lower() in ["gram+","g+"]:
-            for fastaID in sequenceIDs:
-                masterData[fastaID] = [fastaID, "1"]
-            for method in incFeatures:
-                tsvFile = os.path.join( featureDir, method.upper(), "%s.%s.tsv" % ( Path( inputFasta ).stem, method ) )
-                for (i, line) in enumerate( open( tsvFile ).read().splitlines() ):
-                    tokens = line.split( '\t' )
-                    if i == 0:
-                        if method == "psortb":
-                            masterLabels += tokens[2:]
+        if organism.lower() in ["gram+","g+","gram-","g-"]:
+            masterLabels = ["ID", "Gram"]
+            masterData = {}
+    
+            sequenceIDs = readfasta.readFastaDesc( inputFasta, key="full" )
+            if organism.lower() in ["gram+","g+"]:
+                for fastaID in sequenceIDs:
+                    masterData[fastaID] = [fastaID, "1"]
+                for method in incFeatures:
+                    tsvFile = os.path.join( featureDir, method.upper(), "%s.%s.tsv" % ( Path( inputFasta ).stem, method ) )
+                    for (i, line) in enumerate( open( tsvFile ).read().splitlines() ):
+                        tokens = line.split( '\t' )
+                        if i == 0:
+                            if method == "psortb":
+                                masterLabels += tokens[2:]
+                            else:
+                                masterLabels += tokens[1:]
                         else:
-                            masterLabels += tokens[1:]
-                    else:
-                        if method == "psortb":
-                            masterData[tokens[0]] += tokens[2:]
+                            if method == "psortb":
+                                masterData[tokens[0]] += tokens[2:]
+                            else:
+                                masterData[tokens[0]] += tokens[1:]
+            elif organism.lower() in ["gram-","g-"]:
+                for fastaID in sequenceIDs:
+                    masterData[fastaID] = [fastaID,"0"]
+                for method in incFeatures:
+                    tsvFile = os.path.join( featureDir, method.upper(), "%s.%s.tsv" % ( Path( inputFasta ).stem, method ) )
+                    for (i, line) in enumerate( open( tsvFile ).read().splitlines() ):
+                        tokens = line.split( '\t' )
+                        if i == 0:
+                            if method == "psortb":
+                                masterLabels += tokens[2:]
+                            else:
+                                masterLabels += tokens[1:]
                         else:
-                            masterData[tokens[0]] += tokens[1:]
-        elif organism.lower() in ["gram-","g-"]:
+                            if method == "psortb":
+                                masterData[tokens[0]] += tokens[2:]
+                            else:
+                                masterData[tokens[0]] += tokens[1:]
+        else:
+            masterLabels = ["ID"]
+            masterData = {}
+    
+            sequenceIDs = readfasta.readFastaDesc( inputFasta, key="full" )
             for fastaID in sequenceIDs:
-                masterData[fastaID] = [fastaID,"0"]
+                masterData[fastaID] = [fastaID]
             for method in incFeatures:
                 tsvFile = os.path.join( featureDir, method.upper(), "%s.%s.tsv" % ( Path( inputFasta ).stem, method ) )
                 for (i, line) in enumerate( open( tsvFile ).read().splitlines() ):
@@ -76,31 +98,44 @@ class VaxignML:
             output.append( "\t".join( masterData[fastaID] ) )
         open( os.path.join( outputDir, "%s.input.tsv" % Path( inputFasta ).stem  ), 'w' ).write( '\n'.join( output ) )
         
-    def predict( self, inputFasta, outputDir, modelDir ):
+    def predict( self, inputFasta, outputDir, modelDir, model='virus'):
         inputFile = os.path.join( outputDir, "%s.input.tsv" % Path( inputFasta ).stem  )
         
         if (sys.version_info > (3, 0)):
-            scaler = joblib.load( os.path.join( modelDir, "Scaler.sav" ) )
-            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML.sav" ) )
-            scores = joblib.load( os.path.join( modelDir, "VaxignML.scores" ) )
+            scaler = joblib.load( os.path.join( modelDir, "Scaler_%s.sav" % model ) )
+            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML_%s.sav" % model ) )
+            scores = joblib.load( os.path.join( modelDir, "VaxignML_%s.scores" % model ) )
         else:
-            scaler = joblib.load( os.path.join( modelDir, "Scaler.sav.2" ) )
-            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML.sav.2" ) )
-            scores = joblib.load( os.path.join( modelDir, "VaxignML.scores.2" ) )
+            scaler = joblib.load( os.path.join( modelDir, "Scaler_%s.sav.2" % model ) )
+            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML_%s.sav.2" % model ) )
+            scores = joblib.load( os.path.join( modelDir, "VaxignML_%s.scores.2" % model ) )
         
-        labels = open( inputFile ).read().splitlines()[0].split( '\t' )[1:]
-        samples = []
-        X = np.array( [] ).reshape( 0, len( labels ) )
-        groups = []
-        for line in open( inputFile ).read().splitlines()[1:]:
-            tokens = line.split( '\t' )
-            fastaID = tokens[0]
-            samples.append( fastaID )
-            groups.append( int( tokens[1] ) )
-            value = np.array( tokens[1:] ).reshape( 1, len( labels ) )
-            X = np.concatenate( ( X, value ), axis = 0 )
-        X = X.astype( float )
-        X = scaler.transform( X )
+        if model == 'bacteria':
+            labels = open( inputFile ).read().splitlines()[0].split( '\t' )[1:]
+            samples = []
+            X = np.array( [] ).reshape( 0, len( labels ) )
+            groups = []
+            for line in open( inputFile ).read().splitlines()[1:]:
+                tokens = line.split( '\t' )
+                fastaID = tokens[0]
+                samples.append( fastaID )
+                groups.append( int( tokens[1] ) )
+                value = np.array( tokens[1:] ).reshape( 1, len( labels ) )
+                X = np.concatenate( ( X, value ), axis = 0 )
+            X = X.astype( float )
+            X = scaler.transform( X )
+        else:
+            labels = open( inputFile ).read().splitlines()[0].split( '\t' )[1:]
+            samples = []
+            X = np.array( [] ).reshape( 0, len( labels ) )
+            for line in open( inputFile ).read().splitlines()[1:]:
+                tokens = line.split( '\t' )
+                fastaID = tokens[0]
+                samples.append( fastaID )
+                value = np.array( tokens[1:] ).reshape( 1, len( labels ) )
+                X = np.concatenate( ( X, value ), axis = 0 )
+            X = X.astype( float )
+            X = scaler.transform( X )
         
         y_pred = vaxignML.predict( X )
         y_prob = vaxignML.predict_proba( X )
@@ -119,14 +154,17 @@ class VaxignML:
         if not os.path.exists( args.outputDir ):
             os.mkdir( args.outputDir )
         if not ( os.path.exists( args.savedModel ) 
-            and os.path.exists( os.path.join( args.savedModel, "Scaler.sav" ) )
-            and os.path.exists( os.path.join( args.savedModel, "VaxignML.sav" ) )
-            and os.path.exists( os.path.join( args.savedModel, "VaxignML.scores" ) )
+            and os.path.exists( os.path.join( args.savedModel, "Scaler_bacteria.sav" ) )
+            and os.path.exists( os.path.join( args.savedModel, "VaxignML_bacteria.sav" ) )
+            and os.path.exists( os.path.join( args.savedModel, "VaxignML_bacteria.scores" ) )
+            and os.path.exists( os.path.join( args.savedModel, "Scaler_virus.sav" ) )
+            and os.path.exists( os.path.join( args.savedModel, "VaxignML_virus.sav" ) )
+            and os.path.exists( os.path.join( args.savedModel, "VaxignML_virus.scores" ) )
             ):
             sys.stderr.write( "Unable to find previous train model! Please check your input.\n" )
             exit(1)
-        if args.organism.lower() not in ["gram+","g+","gram-","g-"]:
-            sys.stderr.write( "Incorrect organism! Please choose from: [gram+,gram-]\n" )
+        if args.organism.lower() not in ["gram+","g+","gram-","g-", "virus", "v"]:
+            sys.stderr.write( "Incorrect organism! Please choose from: [gram+,gram-,virus]\n" )
             exit(1)
         if args.multiFlag.lower() not in ['t','true','f','false']:
             sys.stderr.write( "Incorrect input for multi-processes! Please choose from: [T,F]\n" )
@@ -154,27 +192,44 @@ class VaxignML:
             featureDir = os.path.join( args.outputDir, "_FEATURE" )
             if not os.path.exists( featureDir ):
                 os.mkdir( featureDir )
-            
-            incFeatures = []
-            incFeatures.append( "psortb" )
-            Feature.run_psortb( args.inputFasta, featureDir, args.organism, args.multiFlag, args.process, args.rawFlag )
-            incFeatures.append( "spaan" )
-            Feature.run_spaan( args.inputFasta, featureDir, args.rawFlag )
-            incFeatures.append( "signalp" )
-            Feature.run_signalp( args.inputFasta, featureDir, args.organism, args.multiFlag, args.process, args.rawFlag )
-            incFeatures.append( "tmhmm" )
-            Feature.run_tmhmm( args.inputFasta, featureDir, args.multiFlag, args.process, args.rawFlag )
-            incFeatures.append( "imgen" )
-            Feature.run_immugen( args.inputFasta, featureDir, args.rawFlag )
-            incFeatures.append( "mdesc" )
-            Feature.run_descriptor( args.inputFasta, featureDir, args.rawFlag )
-            
-            self.makeInput( args.inputFasta, args.outputDir, args.organism, incFeatures )
-            
-            if args.rawFlag.lower() in ['f','false']:
-                shutil.rmtree( featureDir )
-            
-            self.predict( args.inputFasta, args.outputDir, args.savedModel )
+            if args.organism.lower() in ["gram+","g+","gram-","g-"]:
+                incFeatures = []
+                incFeatures.append( "psortb" )
+                Feature.run_psortb( args.inputFasta, featureDir, args.organism, args.multiFlag, args.process, args.rawFlag )
+                incFeatures.append( "spaan" )
+                Feature.run_spaan( args.inputFasta, featureDir, args.rawFlag )
+                incFeatures.append( "signalp" )
+                Feature.run_signalp( args.inputFasta, featureDir, args.organism, args.multiFlag, args.process, args.rawFlag )
+                incFeatures.append( "tmhmm" )
+                Feature.run_tmhmm( args.inputFasta, featureDir, args.multiFlag, args.process, args.rawFlag )
+                incFeatures.append( "imgen" )
+                Feature.run_immugen( args.inputFasta, featureDir, args.rawFlag )
+                incFeatures.append( "mdesc" )
+                Feature.run_descriptor( args.inputFasta, featureDir, args.rawFlag )
+                
+                self.makeInput( args.inputFasta, args.outputDir, args.organism, incFeatures )
+                
+                if args.rawFlag.lower() in ['f','false']:
+                    shutil.rmtree( featureDir )
+                
+                self.predict( args.inputFasta, args.outputDir, args.savedModel, model="bacteria" )
+            elif args.organism.lower() in ["virus","v"]:
+                incFeatures = []
+                incFeatures.append( "spaan" )
+                Feature.run_spaan( args.inputFasta, featureDir, args.rawFlag )
+                incFeatures.append( "tmhmm" )
+                Feature.run_tmhmm( args.inputFasta, featureDir, args.multiFlag, args.process, args.rawFlag )
+                incFeatures.append( "imgen" )
+                Feature.run_immugen( args.inputFasta, featureDir, args.rawFlag )
+                incFeatures.append( "mdesc" )
+                Feature.run_descriptor( args.inputFasta, featureDir, args.rawFlag )
+                
+                self.makeInput( args.inputFasta, args.outputDir, args.organism, incFeatures )
+                
+                if args.rawFlag.lower() in ['f','false']:
+                    shutil.rmtree( featureDir )
+                
+                self.predict( args.inputFasta, args.outputDir, args.savedModel, model="virus" )
             
         except:
             print( sys.exc_info() )
