@@ -28,7 +28,7 @@ $ wget https://raw.githubusercontent.com/VIOLINet/Vaxign-ML-docker/master/Train.
 
 $ chmod a+x Train.sh
 
-$ ./Train.sh [POSITIVE_FASTA] [NEGATIVE_FASTA] [OUTPUT_MODEL_DIRECTORY] [ORGANISM_TYPE]
+$ ./Train.sh [POSITIVE_FASTA] [NEGATIVE_FASTA] [OUTPUT_MODEL_DIRECTORY] [ORGANISM_TYPE] [OPTIONAL_#_PROCESS]
 
 $ wget https://raw.githubusercontent.com/VIOLINet/Vaxign-ML-docker/master/VaxignML.sh
 
