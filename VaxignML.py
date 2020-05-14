@@ -154,12 +154,12 @@ class VaxignML:
         if not os.path.exists( args.outputDir ):
             os.mkdir( args.outputDir )
         if not ( os.path.exists( args.savedModel ) 
-            and os.path.exists( os.path.join( args.savedModel, "Scaler_bacteria.sav" ) )
-            and os.path.exists( os.path.join( args.savedModel, "VaxignML_bacteria.sav" ) )
-            and os.path.exists( os.path.join( args.savedModel, "VaxignML_bacteria.scores" ) )
-            and os.path.exists( os.path.join( args.savedModel, "Scaler_virus.sav" ) )
-            and os.path.exists( os.path.join( args.savedModel, "VaxignML_virus.sav" ) )
-            and os.path.exists( os.path.join( args.savedModel, "VaxignML_virus.scores" ) )
+            and os.path.exists( os.path.join( MODEL_PATH, "Scaler_bacteria.sav" ) )
+            and os.path.exists( os.path.join( MODEL_PATH, "VaxignML_bacteria.sav" ) )
+            and os.path.exists( os.path.join( MODEL_PATH, "VaxignML_bacteria.scores" ) )
+            and os.path.exists( os.path.join( MODEL_PATH, "Scaler_virus.sav" ) )
+            and os.path.exists( os.path.join( MODEL_PATH, "VaxignML_virus.sav" ) )
+            and os.path.exists( os.path.join( MODEL_PATH, "VaxignML_virus.scores" ) )
             ):
             sys.stderr.write( "Unable to find previous train model! Please check your input.\n" )
             exit(1)
