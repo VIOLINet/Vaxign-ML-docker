@@ -102,13 +102,19 @@ class VaxignML:
         inputFile = os.path.join( outputDir, "%s.input.tsv" % Path( inputFasta ).stem  )
         
         if (sys.version_info > (3, 0)):
-            scaler = joblib.load( os.path.join( modelDir, "Scaler_%s.sav" % model ) )
-            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML_%s.sav" % model ) )
-            scores = joblib.load( os.path.join( modelDir, "VaxignML_%s.scores" % model ) )
+            if modelDir == MODEL_PATH:
+                scaler = joblib.load( os.path.join( modelDir, "Scaler_%s.sav" % model ) )
+                vaxignML = joblib.load( os.path.join( modelDir, "VaxignML_%s.sav" % model ) )
+                scores = joblib.load( os.path.join( modelDir, "VaxignML_%s.scores" % model ) )
+            else:
+                scaler = joblib.load( os.path.join( modelDir, "Scaler.sav" ) )
+                vaxignML = joblib.load( os.path.join( modelDir, "VaxignML.sav" ) )
+                scores = joblib.load( os.path.join( modelDir, "VaxignML.scores" ) )
         else:
-            scaler = joblib.load( os.path.join( modelDir, "Scaler_%s.sav.2" % model ) )
-            vaxignML = joblib.load( os.path.join( modelDir, "VaxignML_%s.sav.2" % model ) )
-            scores = joblib.load( os.path.join( modelDir, "VaxignML_%s.scores.2" % model ) )
+            if modelDir == MODEL_PATH:
+                scaler = joblib.load( os.path.join( modelDir, "Scaler_%s.sav.2" % model ) )
+                vaxignML = joblib.load( os.path.join( modelDir, "VaxignML_%s.sav.2" % model ) )
+                scores = joblib.load( os.path.join( modelDir, "VaxignML_%s.scores.2" % model ) )
         
         if model == 'bacteria':
             labels = open( inputFile ).read().splitlines()[0].split( '\t' )[1:]
